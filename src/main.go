@@ -30,7 +30,7 @@ func statusHandler(rw http.ResponseWriter, request *http.Request) {
 
 func main() {
 	fs := http.FileServer(http.Dir(staticDir))
-	http.Handle("/public/",http.StripPrefix("/public", fs))
+	http.Handle("/public/", http.StripPrefix("/public/", fs))
 	http.HandleFunc("/status", statusHandler)
 	err := http.ListenAndServe(":"+"8080", nil)
 	if err != nil {

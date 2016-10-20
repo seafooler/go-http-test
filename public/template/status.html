@@ -7,13 +7,14 @@
 		Worker Status
 	</p>
 	<ul class="list-group">
-		{{ range $key, $value := .Glustermnts }}
+	{{ range $key, $value := .Glustermnts }}
 		<li class="list-group-item">
 			{{ $key }} : {{$value}} 
 		</li>
-		{{ end }}
+	{{ end }}
 	</ul>
 </div>
 
 {{template "footer"}}
 {{end}}
+
