@@ -1,0 +1,19 @@
+{{define "main"}}
+{{template "header"}}
+
+<!-- Main -->
+<div id="page" class="container">
+	<p>
+		Worker Status
+	</p>
+	<ul class="list-group">
+		{{ range $glustermnt := .Glustermnts }}
+			<li class="list-group-item">
+				{{ $glustermnt }}
+			</li>
+		{{ end }}
+	</ul>
+</div>
+
+{{template "footer"}}
+{{end}}
